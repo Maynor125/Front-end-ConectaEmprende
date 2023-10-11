@@ -1,4 +1,5 @@
 package com.conectaemprende;
+
 import android.os.Bundle;
 import com.zoontek.rnbootsplash.RNBootSplash;
 import com.facebook.react.ReactActivity;
@@ -9,7 +10,8 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate;
 public class MainActivity extends ReactActivity {
 
   /**
-   * Returns the name of the main component registered from JavaScript. This is used to schedule
+   * Returns the name of the main component registered from JavaScript. This is
+   * used to schedule
    * rendering of the component.
    */
   @Override
@@ -18,8 +20,10 @@ public class MainActivity extends ReactActivity {
   }
 
   /**
-   * Returns the instance of the {@link ReactActivityDelegate}. Here we use a util class {@link
-   * DefaultReactActivityDelegate} which allows you to easily enable Fabric and Concurrent React
+   * Returns the instance of the {@link ReactActivityDelegate}. Here we use a util
+   * class {@link
+   * DefaultReactActivityDelegate} which allows you to easily enable Fabric and
+   * Concurrent React
    * (aka React 18) with two boolean flags.
    */
   @Override
@@ -31,9 +35,10 @@ public class MainActivity extends ReactActivity {
         DefaultNewArchitectureEntryPoint.getFabricEnabled());
   }
 
-    @Override
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
     RNBootSplash.init(this, R.style.BootTheme); // ⬅️ initialize the splash screen
-    super.onCreate(savedInstanceState); // or super.onCreate(null) with react-native-screens
+    super.onCreate(null); // or super.onCreate(null) with react-native-screens
   }
+
 }
