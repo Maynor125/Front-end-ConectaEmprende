@@ -122,7 +122,7 @@ function Cperfil({ navigation }) {
               },
             ]}
           />
-          <Button theme={{ colors: { primary: '#5A256F' } }} style={[styles.boton2]} mode={'contained'} onPress={handleSubmit(console.log)}>
+          <Button theme={{ colors: { primary: '#5A256F' } }} style={[styles.boton2]} mode={'contained'} onPress={() => navigation.navigate('HomeScreen')}>
             Complete profile
           </Button>
         </View>
