@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, ScrollView } from 'react-native';
 import { IconButton, MD3Colors, ProgressBar, Searchbar } from 'react-native-paper';
 import Iconnavbar from '../components/Iconnavbar';
+
 
 function HomeScreen( {}) {
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -9,7 +10,7 @@ function HomeScreen( {}) {
   const onChangeSearch = (query: React.SetStateAction<string>) => setSearchQuery(query);
   return (
     <><Iconnavbar></Iconnavbar>
-
+<ScrollView style={{backgroundColor: 'white'}}>
       <View style={[styles.contain]}>
         <View style={[styles.busqueda]}>
           <Searchbar style={[styles.barrita]}
@@ -139,7 +140,8 @@ function HomeScreen( {}) {
             </View>   
           </View> 
           </View>
-      </View>    
+      </View>  
+      </ScrollView>  
       </>
   );
 }

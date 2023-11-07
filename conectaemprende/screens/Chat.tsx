@@ -1,82 +1,87 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, View,StatusBar,} from 'react-native';
-import {IconButton, Text, TextInput, Button} from 'react-native-paper';
-import FormBuilder from 'react-native-paper-form-builder';
+import { SafeAreaView, ScrollView, StyleSheet, View, StatusBar, } from 'react-native';
+import { IconButton, Text, TextInput, Button } from 'react-native-paper';
 import Mensaje from '../components/Mensaje';
+import 'react-native-gesture-handler'
 
-const Chat = ({navigation}) => {
+const Chat = ({}) => {
   const [text, setText] = React.useState('');
   return (
     <>
-    <View style={[styles.container]}>
-      <Text variant="titleLarge" style={[styles.encabezado]}>
-        Gestion de redes sociales
-      </Text>
-      <View style={[styles.fechacont]}>
-        <IconButton
-          icon={'chevron-left'}
-          onPress={() => navigation.navigate('ChatScreens')}
-        />
-        <Text style={[styles.fechatext]}>Miercoles a las 4:30 PM</Text>
-      </View>
-      <SafeAreaView>
-        <ScrollView style={{height:'72%'}}>
-          <Mensaje
-              text={'En este foro se abordara la tematica.'} />
-          <Mensaje
-              text={'En este foro se abordara la tematica de como potenciar el crecimiento.'}/>
-          <Mensaje
-            text={
+      <View style={[styles.container]}>
+        <Text variant="titleLarge" style={[styles.encabezado]}>
+          Gestion de redes sociales
+        </Text>
+        <View style={[styles.fechacont]}>
+          <IconButton
+            icon={'chevron-left'}
+            onPress={() => console.log('ChatScreens')}
+          />
+          <Text style={[styles.fechatext]}>Miercoles a las 4:30 PM</Text>
+        </View>
+        <SafeAreaView>
+          <ScrollView style={{ height: '72%' }}>
+            <Mensaje
+              text='En este foro se abordara la tematica.' mio={false}
+              picture={require('../assets/Images/Ellipse2.png')}
+              masdeuno={true} />
+            <Mensaje
+              text='En este foro se abordara la tematica de como potenciar el crecimiento.'
+              mio={false}
+              picture={require('../assets/Images/Ellipse2.png')}
+              masdeuno={true} />
+            <Mensaje
+              text=
               'En este foro se abordara la tematica de como potenciar el crecimiento,  tematica de como potenciar el crecimiento.'
-            }
-            mio={false}
-            picture={require('../assets/Images/Ellipse2.png')}
-            masdeuno={true}
+
+              mio={false}
+              picture={require('../assets/Images/Ellipse2.png')}
+              masdeuno={true}
+            />
+            <Mensaje
+              text={
+                'En este foro se abordara la tematica de como potenciar el crecimiento,  tematica de como potenciar el crecimiento.'
+              }
+              mio={true}
+              picture={require('../assets/Images/Ellipse3.png')}
+              masdeuno={true}
+            />
+            <Mensaje
+              text={
+                'En este foro se abordara la tematica de como potenciar el crecimiento,  tematica.'
+              }
+              mio={true}
+              picture={require('../assets/Images/Ellipse2.png')}
+              masdeuno={true}
+            />
+          </ScrollView>
+        </SafeAreaView>
+        <View style={[styles.form]}>
+          <IconButton
+            icon="attachment"
+            iconColor="#797979"
+            size={20}
+            onPress={() => console.log('Pressed')}
           />
-          <Mensaje
-            text={
-              'En este foro se abordara la tematica de como potenciar el crecimiento,  tematica de como potenciar el crecimiento.'
-            }
-            mio={true}
-            picture={require('../assets/Images/Ellipse3.png')}
-            masdeuno={true}
+          <TextInput
+            style={[styles.caja]}
+            label="Escribe un mensaje "
+            value={text}
+            mode="outlined"
+            outlineColor="#797979"
+            onChangeText={text => setText(text)}
           />
-          <Mensaje
-            text={
-              'En este foro se abordara la tematica de como potenciar el crecimiento,  tematica.'
-            }
-            mio={true}
-            picture={require('../assets/Images/Ellipse2.png')}
-            masdeuno={true}
+          <IconButton
+            icon="send"
+            iconColor={'#fff'}
+            size={20}
+            mode="contained"
+            containerColor="#5A256F"
+            onPress={() => console.log('Pressed')}
+            style={{ borderRadius: 5, height: 50, width: 50, marginTop: 10 }}
           />
-        </ScrollView>
-      </SafeAreaView>
-      <View style={[styles.form]}>
-        <IconButton
-          icon="attachment"
-          iconColor="#797979"
-          size={20}
-          onPress={() => console.log('Pressed')}
-        />
-        <TextInput
-          style={[styles.caja]}
-          label="Escribe un mensaje "
-          value={text}
-          mode="outlined"
-          outlineColor="#797979"
-          onChangeText={text => setText(text)}
-        />
-        <IconButton
-          icon="send"
-          iconColor={'#fff'}
-          size={20}
-          mode="contained"
-          containerColor="#5A256F"
-          onPress={() => console.log('Pressed')}
-          style={{borderRadius:5,height:50,width:50,marginTop:10}}
-        />
+        </View>
       </View>
-    </View>
     </>
   );
 };

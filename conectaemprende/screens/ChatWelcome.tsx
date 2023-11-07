@@ -5,10 +5,10 @@ import Iconnavbar from '../components/Iconnavbar'
 
 export default function ChatWelcome() {
   return (
-    <> <Iconnavbar></Iconnavbar>
+    <> <Iconnavbar/>
       <View style={[styles.container]}>
-        <IconButton style={{ position: 'relative', left: 0, marginLeft: -20, }} icon={'chevron-left'} onPress={() => console.log('a')} />
-        <Image style={[styles.img]} source={require('../assets/Images/personadraw.png')} />
+        <IconButton style={{ position: 'relative', left: 0, marginLeft: -20, }} icon={'chevron-left'} onPress={() => console.log('a')}></IconButton>
+        <Image style={[styles.img]} source={require('../assets/Images/personadraw.png')}></Image>
         <View style={[styles.conttext]}>
           <Text style={[styles.title]}>Gestion en redes sociales</Text>
           <Text style={[styles.desc]}>En este foro se abordara la tematica de como potenciar el crecimiento de tus productos o articulos</Text>
@@ -53,5 +53,5 @@ const styles = StyleSheet.create({
   btn: {
     marginTop: 100,
     backgroundColor: '#5A256F'
-  }
-})
+  },
+});

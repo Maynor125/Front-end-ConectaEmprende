@@ -122,7 +122,7 @@ function Cperfil({ navigation }) {
               },
             ]}
           />
-          <Button theme={{ colors: { primary: '#5A256F' } }} style={[styles.boton2]} mode={'contained'} onPress={() => navigation.navigate('HomeScreen')}>
+          <Button theme={{ colors: { primary: '#5A256F' } }} style={[styles.boton2]} mode={'contained'} onPress={() => navigation.navigate('Home')}>
             Complete profile
           </Button>
         </View>
@@ -134,7 +134,7 @@ function Cperfil({ navigation }) {
 
 const styles = StyleSheet.create({
   boton2: {
-    fontSize: 16, fontWeight: '500', fontFamily: 'Ponppins', lineHeight: 24,
+    fontSize: 16, fontWeight: '500', fontFamily: 'Poppins', lineHeight: 24,
     marginTop: '18%', height: 45, textAlign: 'center'
   },
   caja: {

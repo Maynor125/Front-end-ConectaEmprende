@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
 
-const Mensaje = ({text, mio, picture, masdeuno}) => {
+function Mensaje({text, mio, picture, masdeuno}) {
   return (
     <View
       style={{

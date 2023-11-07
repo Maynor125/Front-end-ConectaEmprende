@@ -3,13 +3,7 @@ import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Text, Tooltip, Avatar, IconButton, MD3Colors} from 'react-native-paper';
 
-export default function Foro({ title,picture,text }){ 
-
-  const  navigation = useNavigation();
-  
-  const MisChatScreen = ({}) => {
-    navigation.navigate('MisChat'); // Navega a la vista 'ChatWelcome'
-  };
+function Foro({ title,picture,text }){ 
   /* Estados del ui */
   const [isLike, setIsLike] = useState(false);
   const [isComent, setIsComet] = useState(false);
@@ -53,7 +47,7 @@ export default function Foro({ title,picture,text }){
                 icon="chevron-right"
                 iconColor={MD3Colors.tertiary30}
                 size={20}
-                onPress={MisChatScreen}
+                onPress={()=> navigation.navigate('ChatS')}
               />
             </View>
             </Tooltip>
